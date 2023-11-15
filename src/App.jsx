@@ -1,9 +1,14 @@
+import { BrowserRouter, Route } from 'react-router-dom';
 import logo from './logo.svg';
-import './App.css';
+import Home from 'pages/Home';
+import Detail from 'pages/Detail';
 
 function App() {
   return (
-    <div>props-drilling까지 하고 commit</div>
+   <BrowserRouter>
+      <Route path='/home' element={<Home />} ></Route>
+      <Route path='/detail' element={<Detail />}></Route>
+   </BrowserRouter>
   );
 }
 
