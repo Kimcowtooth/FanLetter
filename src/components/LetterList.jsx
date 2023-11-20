@@ -4,7 +4,10 @@ import Letter from './Letter';
 import { useNavigate } from 'react-router-dom';
 
 export default function LetterList({selectMember,letters}) {
-
+  const navigate = useNavigate();
+  const navigateHandler = () =>{
+    navigate(`/detail/${letters.id}`)
+  }
   const filterLetter = letters.filter(letter => letter.writedTo === selectMember)
   return (
     <ListContainer>

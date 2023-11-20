@@ -3,15 +3,15 @@ import FormAdd from 'components/FormAdd'
 import Header from 'components/Header'
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import fakeDate from 'fakeData.json'
 
-export default function Home() {
+
+export default function Home({letters}) {
   const [selectMember , setSelectMember] = useState("카리나");
-  const [letters, setLetters] = useState(fakeDate);
+  
     return (
       <HomeContainer>
         <Header selectMember={selectMember} setSelectMember={setSelectMember}/>
-        <FormAdd setLetters={setLetters}/>
+        <FormAdd letters ={letters} setLetters={setLetters}/>
         <LetterList letters ={letters} selectMember={selectMember}/>
       </HomeContainer>
     )
