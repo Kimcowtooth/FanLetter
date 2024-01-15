@@ -6,14 +6,12 @@ import { useState } from "react";
 import styled from "styled-components";
 
 
-export default function Home({letters,setLetters}) {
-    const [activeMember , setActiveMember] = useState("카리나");
-
+export default function Home() {
   return (
     <Container>
-      <Header activeMember={activeMember} setActiveMember={setActiveMember}/>
-      <AddForm setLetters={setLetters}/>
-      <LetterList letters={letters} activeMember={activeMember}/>
+      <Header/>
+      <AddForm />
+      <LetterList/>
     </Container>
   );
 }

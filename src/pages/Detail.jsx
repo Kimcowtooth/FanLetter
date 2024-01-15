@@ -1,12 +1,14 @@
 import Avatar from 'componets/common/Avatar';
 import Button from 'componets/common/Button';
-import React, { useState } from 'react'
+import { LetterContext } from 'context/LetterContext';
+import React, { useContext, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
 import styled from 'styled-components';
 import { getFormattedDate } from 'util/date';
 
-export default function Detail({letters,setLetters}) {
+export default function Detail() {
+  const {letters,setLetters} = useContext(LetterContext)
   const [isEditing, setIsEditing] = useState(false);
   const [editingText , setEditingText] = useState();
   const navigate = useNavigate();
